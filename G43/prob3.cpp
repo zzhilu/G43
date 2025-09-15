@@ -13,7 +13,5 @@ int main() {
 	
 	media = (nota1 + nota2 + nota3) / 3;
 
-	cout << "A media das notas e: ";
-
-	cout << media << endl;
+	cout << "Las notas : " << nota1 << "," << nota2 << "," << nota3 << "," << "A media das notas e:" << media << endl;
 }
