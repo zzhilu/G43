@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prob15.cpp">
+    <ClCompile Include="EJE3aEDAD.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="prob21compara.cpp">
+    <ClCompile Include="EJE3b17.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

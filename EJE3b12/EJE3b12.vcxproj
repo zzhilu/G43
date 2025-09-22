@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5f832048-4d7b-4c61-a10a-a35588cf24d8}</ProjectGuid>
-    <RootNamespace>proyecto3p15</RootNamespace>
+    <ProjectGuid>{aedbf016-3ee0-4718-89d7-9d7a0032811a}</ProjectGuid>
+    <RootNamespace>EJE3b12</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,8 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="prob21compara.cpp" />
-    <ClCompile Include="prob15.cpp" />
+    <ClCompile Include="EJE3b12.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

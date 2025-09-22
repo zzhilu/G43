@@ -5,10 +5,10 @@ using namespace std;
 int main()
 {
 
-	int x;
+	int x ;
 
 	float rest ,rest2;
-	cout << "INTRO EL VALOR E: ";
+	cout << "INTRO EL VALOR x : ";
 	cin >> x;
 
 	rest = 2.0 /( x+4);

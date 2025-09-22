@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prob15.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="prob21compara.cpp">
+    <ClCompile Include="EJE3b12.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
