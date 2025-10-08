@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="eje3a2.cpp">
+    <ClCompile Include="suma10num.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="3b1.cpp">
+    <ClCompile Include="medianum.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="ponec.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
