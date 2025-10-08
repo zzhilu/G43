@@ -99,6 +99,16 @@ int main() {
     }
 
 
+    if (guineus <= 0 || conills <= 0) {
+        if (guineus <= 0)
+            cout << "Ho sento, has fet fallida. No et queden guineus." << endl;
+        if (conills <= 0)
+            cout << "Ho sento, has fet fallida. No et queden conills." << endl;
+    }
+    else {
+        cout << "Felicitats! Tens " << conills << " conills i " << guineus << " guineus." << endl;
+    }
+
 
     return 0;
 }
