@@ -1,14 +1,10 @@
 #include <iostream>
-#include <cmath>
-#include "Aleatori.h"
-
+#include "Aleatori.h"   
 using namespace std;
 
 int main() {
-
+    // Exercici 1: generacions
     int Generacions;
-    int Conill;
-    int Guineu;
     cout << "Benvingut al FoxRabbit! Si us plau, quantes generacions vols estudiar?" << endl;
     cin >> Generacions;
     while (Generacions <= 0) {
@@ -16,8 +12,8 @@ int main() {
         cin >> Generacions;
     }
 
-
-
+    // Exercici 3: inicials
+    int Conill, Guineu;
     cout << "Introdueix el nombre inicial de conills:" << endl;
     cin >> Conill;
     while (Conill <= 0) {
@@ -31,8 +27,8 @@ int main() {
         cin >> Guineu;
     }
 
-
-    float  alpha, beta, gamma_, delta;
+    // Exercici 4: paràmetres (>0)
+    float alpha, beta, gamma_, delta;
     cout << "Introdueix el factor de creixement dels conills:" << endl;
     cin >> alpha;
     while (alpha <= 0) {
@@ -61,54 +57,44 @@ int main() {
         cin >> delta;
     }
 
+    // Estat actual
+int conills = Conill;
+int guineus = Guineu;
 
-    int conills = Conill;
-    int guineus = Guineu;
-
-    // 5.2
-    for (int gen = 1; gen <= Generacions; ++gen) {
+for (int gen = 1; gen <= Generacions; ++gen) {
+    if (gen < Generacions) {
         int pert = Aleatori(-2, 2);
-        if (pert == 1) {
-            delta *= 1.01;
-        }
-        else if (pert == 2) {
-            alpha *= 1.01;
-        }
-        else if (pert == -1) {
-            gamma_ *= 1.01;
-        }
-        else if (pert == -2) {
-            beta *= 1.01;
-        }
+        if (pert == 1)       delta  *= 1.01f; 
+        else if (pert == 2)  alpha  *= 1.01f; 
+        else if (pert == -1) gamma_ *= 1.01f; 
+        else if (pert == -2) beta   *= 1.01f; 
+        double next_conills_f = conills + alpha * conills - beta  * conills * guineus;
+        double next_guineus_f = guineus - gamma_ * guineus + delta * conills * guineus;
 
-        // 5.1
-        float  new_conills =
-            conills + alpha * conills - beta * conills * guineus;
-        float  new_guineus =
-            guineus - gamma_ * guineus + delta * conills * guineus;
+        conills = static_cast<int>(next_conills_f); 
+        guineus = static_cast<int>(next_guineus_f);
 
-        conills = static_cast<int>(round(new_conills));
-        guineus = static_cast<int>(round(new_guineus));
-
-        // 5.3
         cout << "Hem estudiat " << gen << " generacions i.." << endl;
         cout << "tenim " << guineus << " guineus" << endl;
         cout << "tenim " << conills << " conills" << endl;
 
-        if (conills <= 0 || guineus <= 0) break;
+        if (conills <= 0 || guineus <= 0) break; 
+    } else {
+        cout << "Hem estudiat " << gen << " generacions i.." << endl;
+        cout << "tenim " << guineus << " guineus" << endl;
+        cout << "tenim " << conills << " conills" << endl;
+       
+        break;
     }
+}
 
 
-    if (guineus <= 0 || conills <= 0) {
-        if (guineus <= 0)
-            cout << "Ho sento, has fet fallida. No et queden guineus." << endl;
-        if (conills <= 0)
-            cout << "Ho sento, has fet fallida. No et queden conills." << endl;
-    }
-    else {
-        cout << "Felicitats! Tens " << conills << " conills i " << guineus << " guineus." << endl;
-    }
-
+if (conills > 0 && guineus > 0) {
+    cout << "Felicitats tens " << conills << " conills i " << guineus << " guineus." << endl;
+} else {
+    if (conills <= 0) cout << "Ho sento, has fet fallida. No et queden conills" << endl;
+    if (guineus <= 0) cout << "Ho sento, has fet fallida. No et queden guineus" << endl;
+}
 
     return 0;
 }
